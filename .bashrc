@@ -126,3 +126,6 @@ export PATH=$PATH:/opt/t32/bin/pc_linux64
 export T32SYS=/opt/t32
 export T32TMP=/tmp
 export T32ID=T32
+
+# add Genode toolchain to executable paths
+export PATH=$PATH:/usr/local/genode-gcc/bin
