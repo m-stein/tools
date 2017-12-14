@@ -1,0 +1,80 @@
+[core]
+	editor = vim
+
+[alias]
+	# misc
+	co = "!bash /usr/bin/git_safe_checkout"
+	ci = commit
+	ca = commit --amend
+	ad = add --all
+	st = status
+	up = push -f
+
+	# branch
+	br = branch
+	bd = branch --delete
+	bm = branch --move
+
+	# rebase
+	rb = rebase
+	ro = rebase --onto
+	ri = rebase --interactive
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+
+	# cherry-pick
+	pi = cherry-pick
+	pc = cherry-pick --continue
+	pa = cherry-pick --abort
+
+	# mergetool
+	mt = mergetool
+
+	# bisect
+	bis = bisect start
+	big = bisect good
+	bib = bisect bad
+	bir = bisect reset
+
+	# log
+	lo = log --oneline
+	la = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s'
+	l1 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -10
+	l2 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -20
+	l3 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -30
+	l4 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -40
+	l5 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -50
+	l6 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -60
+	l7 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -70
+	l8 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -80
+	l9 = log --date=short --format='%Cgreen %ad  %<(16,trunc)%an%C(yellow) %h%Creset %s' -90
+
+	# diff
+	di = difftool --dir-diff
+	do = "!sh -c \"git difftool --dir-diff $1~ $1\" -"
+
+[user]
+	name = Martin Stein
+	email = martin.stein@genode-labs.com
+
+[push]
+	default = simple
+
+[color]
+	ui = auto
+
+[diff]
+    tool = meld
+
+[difftool]
+    prompt = false
+
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+
+[merge]
+    tool = meld
+
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
