@@ -1,0 +1,28 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+  go_up = <Ctrl><Shift>Up
+  go_down = <Ctrl><Shift>Down
+  go_left = <Ctrl><Shift>Left
+  go_right = <Ctrl><Shift>Right
+  resize_up = <Alt>Up
+  resize_down = <Alt>Down
+  resize_left = <Alt>Left
+  resize_right = <Alt>Right
+  split_vert = <Ctrl><Shift>l
+  split_horiz = <Ctrl><Shift>o
+  close_term = <Ctrl><Shift>k
+[profiles]
+  [[default]]
+    scrollbar_position = disabled
+    show_titlebar = False
+    use_system_font = False
+    font = Fixed 8
+    force_no_bell = True
+    scrollback_lines = 10000
+    copy_on_selection = True
+    allow_bold = False
+    foreground_color = "#F0F0F0"
+    background_color = "#000810"
+    cursor_color = "#F0F0F0"
+    background_image = None
