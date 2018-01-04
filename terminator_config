@@ -1,5 +1,6 @@
 [global_config]
   suppress_multiple_term_dialog = True
+  window_state = maximise
 [keybindings]
   go_up = <Ctrl><Shift>Up
   go_down = <Ctrl><Shift>Down
