@@ -5,10 +5,18 @@
 "" shown in an extra buffer window.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-set grepprg=ag\ --vimgrep
+"
+" Open file from the grep results in a new window (split) except when there
+" already is a window with this file. In the latter case, use that window
+" instead (useopen).
+"
+set switchbuf=useopen,split
+
+" set grepprg=ag\ --vimgrep
 
 function! Grep(...)
-	return system(join([&grepprg] + [expandcmd(join(a:000, ' '))], ' '))
+"	return system(join([&grepprg] + [expandcmd(join(a:000, ' '))], ' '))
+	return system('ag ' . join(a:000, ' '))
 endfunction
 
 command! -nargs=+ -complete=file_in_path -bar G  cgetexpr Grep(<f-args>)
